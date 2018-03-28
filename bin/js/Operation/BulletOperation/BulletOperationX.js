@@ -39,7 +39,7 @@ var operation;
             gameObject.GameObjectFactory.instance.disposeGameObject(this._gameObj);
         };
         return BulletOperationX;
-    }(operation.BaseOperation));
+    }(operation.BaseBulletOperation));
     operation.BulletOperationX = BulletOperationX;
 })(operation || (operation = {}));
 //# sourceMappingURL=BulletOperationX.js.map

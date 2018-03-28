@@ -32,28 +32,15 @@ var gameObject;
             if (this._varsData["host"] == null) {
                 console.assert(false, "子弹宿主对象为空");
             }
+            /*顺序不可颠倒*/
             this._host = this._varsData["host"];
-            this.setBulletInitPos();
             this.registerOperation(this._varsData["operationID"]);
             Laya.timer.frameLoop(1, this, this.update);
-        };
-        /*设置子弹的初始位置位置*/
-        Bullet.prototype.setBulletInitPos = function () {
-            if (this._host != null) {
-                if (this._teamID == 0 /* MASTER */) {
-                    this.pos(this._host.x, this._host.y - this.OFFSET_Y);
-                    this.rotation = 0;
-                }
-                else if (this._teamID == 1 /* ENEMY */) {
-                    this.pos(this._host.x, this._host.y + this.OFFSET_Y);
-                    this.rotation = 180;
-                }
-            }
         };
         /*反初始化*/
         Bullet.prototype.uninitialize = function () {
             Laya.timer.clear(this, this.update);
-            manager.BulletManager.instance.removeAllBulletsDicByKey(this._uID);
+            manager.BulletManager.instance.removeBulletByID(this._uID);
             _super.prototype.uninitialize.call(this);
         };
         Bullet.prototype.dispose = function () {

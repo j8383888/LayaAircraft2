@@ -41,6 +41,8 @@ var manager;
         EventManager.ENEMY_ON_DESTORY = "enemy_on_destory";
         /*master被子弹击中事件*/
         EventManager.MASTER_ON_HIT = "master_on_hit";
+        /*停止制造某架飞机上的所有子弹 并移除该飞机上所有子弹数据*/
+        EventManager.Remove_Host_All_Bullets = "Remove_Host_All_Bullets";
         return EventManager;
     }(laya.events.EventDispatcher));
     manager.EventManager = EventManager;

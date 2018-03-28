@@ -1,6 +1,8 @@
 /*
 * name;
 */
+var stage = Laya.stage;
+var Point = laya.maths.Point;
 var UIUtil = /** @class */ (function () {
     function UIUtil() {
     }
@@ -13,6 +15,10 @@ var UIUtil = /** @class */ (function () {
         }
         return true;
     };
+    UIUtil.STAGE_WIDTH = 480;
+    UIUtil.STAGE_HEIGHT = 800;
+    /*boss弹幕的中心点*/
+    UIUtil.BossBulletBornPoint = new Point(UIUtil.STAGE_WIDTH / 2, 200);
     return UIUtil;
 }());
 //# sourceMappingURL=UIUtil.js.map

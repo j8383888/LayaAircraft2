@@ -7,6 +7,8 @@ module manager{
         public static ENEMY_ON_DESTORY:string = "enemy_on_destory";
         /*master被子弹击中事件*/
 		public static MASTER_ON_HIT:string = "master_on_hit";
+        /*停止制造某架飞机上的所有子弹 并移除该飞机上所有子弹数据*/
+        public static Remove_Host_All_Bullets:string = "Remove_Host_All_Bullets";
         /*单例*/
         private static _instance:EventManager;
 

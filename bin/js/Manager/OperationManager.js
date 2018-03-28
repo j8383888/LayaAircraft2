@@ -14,6 +14,7 @@ var manager;
             this._operationClsDiC.set(3 /* BULLET */, operation.BulletOperation);
             this._operationClsDiC.set(4 /* BULLET_X */, operation.BulletOperationX);
             this._operationClsDiC.set(5 /* BULLET_CIRCLE */, operation.BulletOperationCircle);
+            this._operationClsDiC.set(6 /* SIX_POINT_STAR */, operation.BulletOperationSixPointStar);
         }
         Object.defineProperty(OperationManager, "instance", {
             get: function () {

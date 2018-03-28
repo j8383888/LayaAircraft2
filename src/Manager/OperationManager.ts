@@ -10,6 +10,7 @@ module manager{
 		private _operationClsDiC:Dictionary;
 		private _registerID:number = -1;
 		constructor(){
+			
 			this._ALLRegisterOprDic = new Dictionary();
 			this._operationClsDiC = new Dictionary();
 			this._operationClsDiC.set(OPERATION_TYPE.MASTER,operation.MasterPanelOperation);
@@ -18,6 +19,7 @@ module manager{
 			this._operationClsDiC.set(OPERATION_TYPE.BULLET,operation.BulletOperation);
 			this._operationClsDiC.set(OPERATION_TYPE.BULLET_X,operation.BulletOperationX);
 			this._operationClsDiC.set(OPERATION_TYPE.BULLET_CIRCLE,operation.BulletOperationCircle);
+			this._operationClsDiC.set(OPERATION_TYPE.SIX_POINT_STAR,operation.BulletOperationSixPointStar);
 		}
 
 		public static get instance():OperationManager{

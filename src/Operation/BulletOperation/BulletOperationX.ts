@@ -2,7 +2,7 @@
 * name 
 */
 module operation{
-	export class BulletOperationX extends BaseOperation{
+	export class BulletOperationX extends BaseBulletOperation{
 
 		private readonly Duration_Time:number = 2000;
 		constructor(){

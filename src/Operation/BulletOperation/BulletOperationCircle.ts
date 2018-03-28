@@ -2,7 +2,7 @@
 * name 
 */
 module operation{
-	export class BulletOperationCircle extends BaseOperation{
+	export class BulletOperationCircle extends BaseBulletOperation{
 
 		private static ANGLE:number = 0.5;
 		private _curAngle:number = 0

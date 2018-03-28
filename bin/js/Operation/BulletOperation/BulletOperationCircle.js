@@ -49,7 +49,7 @@ var operation;
         };
         BulletOperationCircle.ANGLE = 0.5;
         return BulletOperationCircle;
-    }(operation.BaseOperation));
+    }(operation.BaseBulletOperation));
     operation.BulletOperationCircle = BulletOperationCircle;
 })(operation || (operation = {}));
 //# sourceMappingURL=BulletOperationCircle.js.map

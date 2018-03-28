@@ -4,7 +4,8 @@
 var GameEntry = /** @class */ (function () {
     function GameEntry() {
         this.checkPlatform();
-        Laya.init(480, 800, Laya.WebGL);
+        Laya.init(UIUtil.STAGE_WIDTH, UIUtil.STAGE_HEIGHT, Laya.WebGL);
+        /*调试工具*/
         // laya.debug.DebugPanel.init();
         Laya.stage.frameRate = "fast";
         Laya.stage.bgColor = ColorUtil.HTML_BLACK;

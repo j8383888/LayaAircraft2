@@ -5,7 +5,7 @@ var manager;
 (function (manager) {
     var BattleLogicManager = /** @class */ (function () {
         function BattleLogicManager() {
-            this.enemyBulletKindAry = [10, 12, 14, 16];
+            this.enemyBulletKindAry = [14, 14, 14, 14];
             this.allEnemyPanels = new Dictionary();
             this.inViewEnemyPanels = new Dictionary();
         }
@@ -53,8 +53,8 @@ var manager;
             this.masterPanel.addBullet(0 /* BULLET_KIND_0 */, 0, 3 /* BULLET */, 10);
         };
         BattleLogicManager.prototype.creatEnemys = function () {
-            // Laya.timer.frameLoop(20,this,this.creatEnemyAry);
-            this.creatEnemyAry();
+            Laya.timer.frameLoop(20, this, this.creatEnemyAry);
+            // this.creatEnemyAry();
         };
         BattleLogicManager.prototype.creatEnemyAry = function () {
             var randomPos = MathUtil.randomToInt(0, 400);
@@ -63,8 +63,8 @@ var manager;
             var enemyPanel = gameObject.GameObjectFactory.instance.creatGameObject(GameObjectEnum.TEXTURE_FLAG, GameObjectEnum.ENEMY_PANEL, randomEnemyPanelType, 0 /* ALIVE */, 1 /* ENEMY */);
             enemyPanel.setPos(randomPos, 50);
             enemyPanel.registerOperation(1 /* ENEMY */);
-            enemyPanel.addBullet(this.enemyBulletKindAry[randomEnemyBulletKind], 0, 5 /* BULLET_CIRCLE */, 1, 3);
-            // enemyPanel.addBullet(randomEnemyBulletType,0,OPERATION_TYPE.BULLET);						
+            enemyPanel.addBullet(this.enemyBulletKindAry[randomEnemyBulletKind], 0, 6 /* SIX_POINT_STAR */, 2);
+            // enemyPanel.addBullet(this.enemyBulletKindAry[randomEnemyBulletKind],0,OPERATION_TYPE.BULLET,30);						
             this.allEnemyPanels.set(enemyPanel.uID, enemyPanel);
             this.inViewEnemyPanels.set(enemyPanel.uID, enemyPanel);
         };

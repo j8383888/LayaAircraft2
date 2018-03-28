@@ -14,7 +14,7 @@ module manager{
 		/*玩家飞机*/
 		public masterPanel:gameObject.MasterPanel;
 
-		private enemyBulletKindAry:Array<number> = [10,12,14,16]
+		private enemyBulletKindAry:Array<number> = [14,14,14,14]
 		
 
 		constructor(){
@@ -70,8 +70,8 @@ module manager{
 		}
 
 		private creatEnemys():void{	
-			// Laya.timer.frameLoop(20,this,this.creatEnemyAry);
-			this.creatEnemyAry();
+			Laya.timer.frameLoop(20,this,this.creatEnemyAry);
+			// this.creatEnemyAry();
 		}
 
 		private creatEnemyAry():void{
@@ -83,8 +83,8 @@ module manager{
 													randomEnemyPanelType, COMMON_STATUS.ALIVE, TEAM.ENEMY);	
 			enemyPanel.setPos(randomPos,50);
 			enemyPanel.registerOperation(OPERATION_TYPE.ENEMY);
-			enemyPanel.addBullet(this.enemyBulletKindAry[randomEnemyBulletKind],0,OPERATION_TYPE.BULLET_CIRCLE,1,3);
-			// enemyPanel.addBullet(randomEnemyBulletType,0,OPERATION_TYPE.BULLET);						
+			enemyPanel.addBullet(this.enemyBulletKindAry[randomEnemyBulletKind],0,OPERATION_TYPE.SIX_POINT_STAR,2);
+			// enemyPanel.addBullet(this.enemyBulletKindAry[randomEnemyBulletKind],0,OPERATION_TYPE.BULLET,30);						
 			this.allEnemyPanels.set(enemyPanel.uID,enemyPanel);
 			this.inViewEnemyPanels.set(enemyPanel.uID,enemyPanel);
 		}

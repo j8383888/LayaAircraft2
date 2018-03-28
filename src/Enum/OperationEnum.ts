@@ -16,5 +16,6 @@ const enum OPERATION_TYPE{
     FRIEND,
     BULLET,
     BULLET_X,
-    BULLET_CIRCLE
+    BULLET_CIRCLE,
+    SIX_POINT_STAR
 }

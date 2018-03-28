@@ -40,7 +40,7 @@ var operation;
             }
         };
         return BulletOperation;
-    }(operation.BaseOperation));
+    }(operation.BaseBulletOperation));
     operation.BulletOperation = BulletOperation;
 })(operation || (operation = {}));
 //# sourceMappingURL=BulletOperation.js.map

@@ -1,7 +1,7 @@
 
     
 module operation{
-    export class BulletOperation extends BaseOperation{
+    export class BulletOperation extends BaseBulletOperation{
 
         private readonly BULLET_SPEED:number = 3;
 
