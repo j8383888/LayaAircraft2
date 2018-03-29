@@ -91,7 +91,9 @@ var operation;
             }
         };
         BulletOperationSixPointStar.prototype.onTweenComplete = function () {
-            manager.BulletManager.instance.sixPointStarBox.slice(0, 1);
+            if (manager.BulletManager.instance.sixPointStarBox != null) {
+                manager.BulletManager.instance.sixPointStarBox.slice(0, 1);
+            }
         };
         /*子弹索引*/
         BulletOperationSixPointStar.index = 0;
